@@ -6,3 +6,5 @@ const router = express.Router();
 //@desc     Test Route
 //@access   Public
 router.get('/', (req,res)=> res.send('user route'));
+
+module.exports = router;
