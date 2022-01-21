@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "connecting developers and artists",
   "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "server": "nodemon server"
+  },
   "author": "Dairo Tomiwa <38611128+maximus-kai@users.noreply.github.com>",
   "license": "MIT",
   "dependencies": {
@@ -15,5 +19,8 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.1.7",
     "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }
