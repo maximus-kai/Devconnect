@@ -3,8 +3,11 @@ const connectDb = require('./config/db');
 
 const app = express();
 
+//connect Database
 connectDb();
 
+//init middleware
+app.use(express.json({extended: false}))
 const PORT = process.env.PORT || 5000;
 
 app.get("/" , (req,res)=> res.send('API working !!!'))
