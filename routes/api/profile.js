@@ -36,4 +36,20 @@ router.get('/me', auth, async (req,res)=>
 //@desc     create/update current user's profile
 //@access   private
 
+router.post('/',[auth, [
+    check('status','status is required').not().isEmpty(),
+    check('skills','skills is required').not().isEmpty()
+]],
+async (req,res)=>{
+    const errors = validationResult(req);
+    if(!errors.isEmpty()){
+        return res.status(400).json({errors: errors.array()})
+    }
+    const {company,
+    website,
+    location,bio,status,githubusername,skills,youtube,facebook,twitter,instagram,linkedin} = 
+    req.body;
+    res.send('not bad')
+})
+
 module.exports = router;
